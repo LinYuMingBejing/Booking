@@ -1,4 +1,4 @@
-package com.items.api.Controller;
+package com.items.api.controller;
 
 import com.items.api.service.UpdateService;
 import com.items.api.util.mongodb.document.Booking;

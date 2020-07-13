@@ -2,15 +2,19 @@ package com.items.api.util.pojo;
 
 import com.items.api.util.mongodb.document.Booking;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class HotelInfo {
+public class HotelInfo implements Serializable {
     private String hotel;
     private String address;
     private int ratings;
     private String description;
     private List<String> comments;
     private List<String> bed_type;
+
+    public HotelInfo() {
+    }
 
     public HotelInfo(Booking booking) {
         this.hotel = booking.getHotel();
@@ -68,4 +72,5 @@ public class HotelInfo {
     public void setBed_type(List<String> bed_type) {
         this.bed_type = bed_type;
     }
+
 }

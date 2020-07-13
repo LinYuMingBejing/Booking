@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-@ControllerAdvice // 對容器進行例外管理
+@ControllerAdvice
 public class GlobalException {
     private static final Logger logger = LoggerFactory.getLogger(GlobalException.class);
 

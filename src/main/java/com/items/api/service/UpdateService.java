@@ -3,13 +3,11 @@ package com.items.api.service;
 
 import com.items.api.util.mongodb.HotelRepository;
 import com.items.api.util.mongodb.document.Booking;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
-import java.util.logging.Logger;
 
 @Service
 public class UpdateService {

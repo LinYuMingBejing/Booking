@@ -5,9 +5,7 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.awt.print.Book;
 import java.util.List;
-import java.util.Map;
 
 @Document(collection="hotelInfo")
 public class Booking {
@@ -135,7 +133,6 @@ public class Booking {
     public void setComments(List<String> comments) {
         this.comments = comments;
     }
-
 
 
     public List<String> getPhoto() {

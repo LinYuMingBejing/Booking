@@ -1,9 +1,10 @@
-package com.items.api.Controller;
+package com.items.api.controller;
 
 import com.items.api.service.QueryService;
 import com.items.api.util.mongodb.document.Booking;
 import com.items.api.util.pojo.DataResponse;
 
+import com.items.api.util.pojo.HotelInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +19,8 @@ public class CustomerController {
 
     @ResponseBody
     @GetMapping("/hotel")
-    public Booking findByHotel(@RequestParam String hotel){
+    public HotelInfo findByHotel(@RequestParam String hotel){
+
         return queryService.findByHotel(hotel);
     }
 

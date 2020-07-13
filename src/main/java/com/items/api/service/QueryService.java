@@ -6,6 +6,7 @@ import com.items.api.util.mongodb.document.Booking;
 import com.items.api.util.pojo.DataResponse;
 import com.items.api.util.pojo.HotelInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 
@@ -27,9 +28,15 @@ public class QueryService {
         return responsePages;
     }
 
-
-    public Booking findByHotel(String hotel){
-        return hotelRepository.findByHotel(hotel);
+    @Cacheable(value="user-key")
+    public HotelInfo findByHotel(String hotel){
+        HotelInfo hotelInfo = new HotelInfo();
+        Booking booking = hotelRepository.findByHotel(hotel);
+        hotelInfo.setAddress(booking.getAddress());
+        hotelInfo.setBed_type(booking.getBed_type());
+        hotelInfo.setComments(booking.getComments());
+        hotelInfo.setHotel(booking.getHotel());
+        return hotelInfo;
     }
 
 

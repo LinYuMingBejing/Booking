@@ -1,6 +1,7 @@
 package com.items.api.util.mongodb;
 
 import com.items.api.util.mongodb.document.Booking;
+import com.items.api.util.pojo.HotelInfo;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.data.mongodb.repository.MongoRepository;
