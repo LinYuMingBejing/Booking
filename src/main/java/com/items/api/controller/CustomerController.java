@@ -20,7 +20,6 @@ public class CustomerController {
     @ResponseBody
     @GetMapping("/hotel")
     public HotelInfo findByHotel(@RequestParam String hotel){
-
         return queryService.findByHotel(hotel);
     }
 

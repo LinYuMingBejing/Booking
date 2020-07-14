@@ -33,9 +33,6 @@ public class UpdateService {
         hotelRepository.save(booking);
 
 
-
-
-
     }
 
 }
