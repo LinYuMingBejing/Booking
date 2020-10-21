@@ -32,28 +32,29 @@
 
 ### Install Redis
 ```
-docker pull redis
-docker run --name redis-lab -p 6379:6379 -d redis
+$ docker pull redis
+$ docker run --name redis-lab -p 6379:6379 -d redis
 
 # Check redis wherether running
-ps -ef | grep redis
-losf -i:6369
+$ ps -ef | grep redis
+$ losf -i:6369
 ```
 
 
 ### Install MongoDB
 ```
-docker pull mongo:latest
-docker run -itd --name mongo -p 27017:27017 mongo
+$ docker pull mongo:latest
+$ docker run -itd --name mongo -p 27017:27017 mongo
 ```
 
 ### Build Images
 ```
-sudo mvn clean package docker:build -P prod
+$ sudo mvn clean package docker:build -P prod
 ```
 
 ### Deploy project
 ```
+$ cd docker_prd
 # Run the services without building
 $ docker-compose up -d
 
