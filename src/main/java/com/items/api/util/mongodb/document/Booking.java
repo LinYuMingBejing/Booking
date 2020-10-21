@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
-@Document(collection="hotelInfo")
+@Document(collection="hotel")
 public class Booking {
     @Id
     private ObjectId id;

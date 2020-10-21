@@ -25,8 +25,8 @@ public class CustomerController {
 
     @ResponseBody
     @GetMapping("/hotel/city")
-    public DataResponse findByCity(@RequestParam String city){
-        return queryService.findByCity(city);
+    public DataResponse findByCity(@RequestParam String city, int ttn){
+        return queryService.findByCity(city, ttn);
     }
 
 
@@ -44,7 +44,7 @@ public class CustomerController {
 
     @ResponseBody
     @GetMapping("/hotel/stars")
-    public DataResponse findByStars(@RequestParam Integer lowStars, @RequestParam(required = false) Integer highStars){
-        return queryService.findByStars(lowStars, highStars);
+    public DataResponse findByStars(@RequestParam Integer lowStars, @RequestParam(required = false) Integer highStars, Integer ttn){
+        return queryService.findByStars(lowStars, highStars, ttn);
     }
 }
